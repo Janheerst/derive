@@ -450,6 +450,8 @@ export function initialize(map) {
     }
 	
 	let jsonLink = GetUrlParameter('mapdata');
+	let jsonLink2 = GetUrlParameter('mapdata2');
+	
 	//let	AccesKey = GetUrlParameter('acces');
 	
 	if(jsonLink !== '' /*&& AccesKey !== ''*/)
@@ -474,7 +476,11 @@ export function initialize(map) {
 	
 	}
 
-	
+	if(jsonLink2 !== '' /*&& AccesKey !== ''*/)
+	{	
+		
+	handleJson(jsonLink2,map);
+	}
 
     let modal = displayIntroModal ? showModal('help') : null;
 
